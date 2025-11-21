@@ -1,1 +1,3 @@
-web: gunicorn flask_user_profiles_app:app
+web: gunicorn run:app
+
+
