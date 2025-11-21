@@ -1,0 +1,34 @@
+1. Valid Registration
+Purpose: verify normal flow
+Input: username=bambootree, email=bambootree@gmail.com, age=19, bio=he/him
+Steps: open /register, submit form
+Expected: redirect to / (home), flash User registered successfully., new user appears in list.
+Actual Result: Result as Expected
+
+2. Duplicate username / email
+Purpose: server-side uniqueness constraints
+Input: username=bambootree, email=bambootree@gmail.com
+Steps: open /register, submit form
+Expected: error, user already exists message
+Actual Result: Result as Expected
+
+3. Invalid email format
+Purpose: validation
+Input: email=not-an-email
+Steps: submit Registration
+Expected: form validation error
+Actual Result: Result as Expected
+
+4. Entry of age is not null
+Purpose: validation
+Input: register without age
+Steps: create a new user and not fill out the age part
+Expected: error, please enter age
+Actual Result: Result as Expected
+
+5.  Ensure that registered profiles can be updated
+Purpose: verify normal flow
+Input: edit profiles
+Steps: go to existing user and change their email
+Expected: approved change
+Actual Result: Result as Expected
